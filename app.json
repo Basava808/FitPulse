@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "fitness-ai-app",
+    "name": "FitPulse",
     "slug": "fitness-ai-app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -9,17 +9,32 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.basava-s.fitnessaiapp"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#111116",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.health.READ_STEPS",
+        "android.permission.health.WRITE_STEPS",
+        "android.permission.health.READ_HEART_RATE",
+        "android.permission.health.READ_TOTAL_CALORIES_BURNED",
+        "android.permission.health.WRITE_TOTAL_CALORIES_BURNED",
+        "android.permission.health.READ_DISTANCE",
+        "android.permission.health.READ_SLEEP",
+        "android.permission.health.READ_EXERCISE",
+        "android.permission.health.READ_EXERCISE_SESSION",
+        "android.permission.health.READ_WEIGHT",
+        "android.permission.health.WRITE_WEIGHT"
+      ],
+      "package": "com.basavas.fitnessaiapp"
     },
     "web": {
       "output": "static",
@@ -33,10 +48,27 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#000000",
           "dark": {
             "backgroundColor": "#000000"
           }
+        }
+      ],
+      [
+        "expo-health-connect",
+        {
+          "permissions": [
+            "ReadSteps",
+            "WriteSteps",
+            "ReadHeartRate",
+            "ReadTotalCaloriesBurned",
+            "WriteTotalCaloriesBurned",
+            "ReadDistance",
+            "ReadSleepSession",
+            "ReadExerciseSession",
+            "ReadWeight",
+            "WriteWeight"
+          ]
         }
       ]
     ],
